@@ -38,7 +38,8 @@ def message():
 
 
 if __name__ == '__main__':
-    schedule.every().day.at("10:11").do(message)
+    #Elegir la hora de la alerta
+    schedule.every().day.at("10:00").do(message)
 
     while True:
         schedule.run_pending()

@@ -7,7 +7,7 @@ A telegram bot that will send you alerts with the Bitcoin and Ethereum prices at
 - pip install requests
 - pip install schedule
 - Or clone this repository and run the command 
-  pip install -r requirements.txt
+  **pip install -r requirements.txt**
 
 Then you would have to change the token and chat_id to the one that Telegram gives you
 

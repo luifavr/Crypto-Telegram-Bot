@@ -13,4 +13,4 @@ Then you would have to change the token and chat_id to the one that Telegram giv
 
 Try it running python3 main.py on your terminal
 
-Or py main.py
+Or py main.py in windows

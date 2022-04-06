@@ -26,5 +26,5 @@ python3 main.py
 ```
 Or in windows
 ```bash
-py main.py in windows
+py main.py 
 ```

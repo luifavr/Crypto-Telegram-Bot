@@ -23,7 +23,7 @@ def btc_scrapping():
 def eth_scrapping():                                                                                                                                                                    
     url = requests.get('https://awebanalysis.com/es/coin-details/ethereum/')
     soup = BeautifulSoup(url.content, 'html.parser')
-    result = soup.find('td',  {'class': 'wbreak_word align-middle coin_price' }) #Buscamos especificamente el precio
+    result = soup.find('td',  {'class': 'wbreak_word align-middle coin_price' }) 
     format_result = result.text
 
     return format_result

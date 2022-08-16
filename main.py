@@ -21,8 +21,8 @@ def coin_scrapper(coin_url):
 
 
 def message():
-    btc_price = f'El precio de Bitcoin es de {btc_scrapping('https://awebanalysis.com/es/coin-details/bitcoin/')}'
-    eth_price = f'El precio de Ethereum es de {eth_scrapping('https://awebanalysis.com/es/coin-details/ethereum/')}'
+    btc_price = f'El precio de Bitcoin es de {coin_scrapper('https://awebanalysis.com/es/coin-details/bitcoin/')}'
+    eth_price = f'El precio de Ethereum es de {coin_scrapper('https://awebanalysis.com/es/coin-details/ethereum/')}'
     botSendText(btc_price)
     botSendText(eth_price)
 

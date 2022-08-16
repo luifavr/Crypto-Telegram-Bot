@@ -10,7 +10,6 @@ def botSendText(botMessage):
     response = requests.get(send_text)
     return response
 
-
 def btc_scrapping():
     url = requests.get('https://awebanalysis.com/es/coin-details/bitcoin/')
     soup = BeautifulSoup(url.content, 'html.parser')

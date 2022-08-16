@@ -10,8 +10,9 @@ def botSendText(botMessage):
     response = requests.get(send_text)
     return response
 
-def btc_scrapping():
-    url = requests.get('https://awebanalysis.com/es/coin-details/bitcoin/')
+
+def coin_scrapper(coin_url):
+    url = requests.get(coin_url)
     soup = BeautifulSoup(url.content, 'html.parser')
     result = soup.find('td', {'class': 'wbreak_word align-middle coin_price'})
     format_result = result.text
@@ -19,19 +20,9 @@ def btc_scrapping():
     return format_result
 
 
-def eth_scrapping():                                                                                                                                                                    
-    url = requests.get('https://awebanalysis.com/es/coin-details/ethereum/')
-    soup = BeautifulSoup(url.content, 'html.parser')
-    result = soup.find('td',  {'class': 'wbreak_word align-middle coin_price' }) 
-    format_result = result.text
-
-    return format_result
-
-    
-
 def message():
-    btc_price = f'El precio de Bitcoin es de {btc_scrapping()}'
-    eth_price = f'El precio de Ethereum es de {eth_scrapping()}'
+    btc_price = f'El precio de Bitcoin es de {btc_scrapping('https://awebanalysis.com/es/coin-details/bitcoin/')}'
+    eth_price = f'El precio de Ethereum es de {eth_scrapping('https://awebanalysis.com/es/coin-details/ethereum/')}'
     botSendText(btc_price)
     botSendText(eth_price)
 

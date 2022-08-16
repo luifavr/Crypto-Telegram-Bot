@@ -4,7 +4,7 @@ A telegram bot that will send you alerts with the Bitcoin and Ethereum prices at
 ### For setup
 - Activate virtual enviroment
 - Run
-```bash 
+``` 
     pip install bs4
 ``` 
 ```bash 
